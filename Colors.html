@@ -1,0 +1,28 @@
+<html lang="en" dir="ltr">
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="Halo.png" type="image/png">
+    </head>
+    <body>
+        <div class="main">
+            Result:<input type="text" id="box" value="rgb(225,225,225)"><br>
+            Red:<input type="range" id="red" value="225" min="0" max="225"><br>
+            Green:<input type="range" id="green" value="225" min="0" max="225"><br>
+            Blue:<input type="range" id="blue" value="225" min="0" max="225"><br>
+        </div>
+        <script type="text/javascript" class="java">
+        function myColor(){
+            var red=document.getElementById('red').value;
+            var green=document.getElementById('green').value;
+            var blue=document.getElementById('blue').value;
+            var color= 'rgb('+red+','+green+','+blue+')';
+            document.body.style.backgroundColor= color;
+            document.getElementById('box').value=color;
+        }
+        document.getElementById('red').addEventListener('input',myColor);
+        document.getElementById('green').addEventListener('input',myColor);
+        document.getElementById('blue').addEventListener('input',myColor);
+        </script>
+    </body>
+</html>

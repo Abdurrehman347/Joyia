@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+.main{
+    height: 400px;
+    width: 250px;
+    background: #333333;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-family: verdana;
+}
+#box{
+    height: 40px;
+    width: 150px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    text-align: center;
+}
+input[type="range"]{
+    -webkit-appearance: none;
+    height: 10px;
+    width: 80%;
+    border-radius: 50px;
+    outline: none;
+}
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 25px;
+    width: 25px;
+    background: #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.main #red{
+    background: linear-gradient(90deg,#000, red);
+}
+.main #green{
+    background: linear-gradient(90deg,#000, green);
+}
+.main #blue{
+    background: linear-gradient(90deg,#000, blue);
+}
+
+.java{
+    function myColor(){
+        var red=document.getElementById("red").value;
+        var green=document.getElementById("green").value;
+        var blue=document.getElementById("blue").value;
+        var color=rgb("+red+","+green+","+blue+")
+        document.body.style.backgroundColor= color;
+        document.getElementById("box").value=color;
+    }
+    Document.getElementById("red").addEventListener("input",myColor);
+    Document.getElementById("green").addEventListener("input",myColor);
+    Document.getElementById("blue").addEventListener("input",myColor);
+    }
